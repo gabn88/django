@@ -213,6 +213,11 @@ Models
   :attr:`~django.db.models.UniqueConstraint.fields` and without a.fields` and without a
   :attr:`~django.db.models.UniqueConstraint.condition`
 
+* The new ``from_queryset`` argument of :meth:`.Model.refresh_from_db` and
+  :meth:`.Model.arefresh_from_db`  allows customizing the queryset used to
+  reload a model's value. This can be used to lock the row before reloading or
+  to select related objects.
+
 Requests and Responses
 ~~~~~~~~~~~~~~~~~~~~~~
 
